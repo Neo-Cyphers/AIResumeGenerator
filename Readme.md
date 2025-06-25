@@ -80,9 +80,9 @@ Project Link: [https://github.com/yourusername/resumecraft](https://github.com/y
 
 ## Screenshots
 
-![Form Section](https://via.placeholder.com/400x300?text=Form+Section)
-![Preview Section](https://via.placeholder.com/400x300?text=Preview+Section)
-![ATS Analysis](https://via.placeholder.com/400x300?text=ATS+Analysis)
+![Form Section](Pictures/frontpage.png)
+![Preview Section](Pictures/previewSection.png)
+![ATS Analysis](Pictures/ATScompatibility.png)
 
 ## Roadmap
 
