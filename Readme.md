@@ -60,16 +60,6 @@ ResumeCraft helps you optimize for Applicant Tracking Systems by:
 - Recommending keywords from job descriptions
 - Ensuring proper formatting and structure
 
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -84,10 +74,4 @@ Project Link: [ResumeCraft - AI Resume Builder](https://ai-resume-generator-l82k
 ![Preview Section](Pictures/previewSection.png)
 ![ATS Analysis](Pictures/ATScompatibility.png)
 
-## Roadmap
 
-- [ ] Add more template options
-- [ ] Implement PDF generation
-- [ ] Add social media integration
-- [ ] Expand ATS analysis capabilities
-- [ ] Add multi-language support
