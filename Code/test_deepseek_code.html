@@ -1420,32 +1420,46 @@
             URL.revokeObjectURL(a.href);
         }
 
+        
+
         // Copy for Word
-        async function copyForWord() {
-            const content = await generateResumeContentCore();
-            const template = document.querySelector('.template-option.active').dataset.template;
-            const tempDiv = document.createElement('div');
-            tempDiv.className = `resume-content-base template-${template}`;
-            tempDiv.style.width = '8.5in';
-            tempDiv.style.padding = '1in 0.75in';
-            tempDiv.style.boxSizing = 'border-box';
-            tempDiv.style.fontFamily = document.getElementById('fontFamily').value;
-            tempDiv.innerHTML = content;
-            document.body.appendChild(tempDiv);
-            const range = document.createRange();
-            range.selectNode(tempDiv);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            try {
-                document.execCommand('copy');
-                showToast('Resume copied to clipboard! Paste into Word/Docs.', 'bg-green-500');
-            } catch (err) {
-                showToast('Failed to copy. Please select and copy manually.', 'bg-red-600');
-            } finally {
-                window.getSelection().removeAllRanges();
-                document.body.removeChild(tempDiv);
-            }
+                async function copyForWord() {
+            const fullName = document.getElementById('fullName')?.value || 'Resume';
+            const filename = `${fullName.replace(/\s+/g, '_')}_resume.doc`;
+
+            const content = getResumeHTML();
+            const fullHtml = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta charset="utf-8">
+        <title>${fullName} Resume</title>
+        <style>
+            @page { size: A4; margin: 2cm; }
+            body { font-family: sans-serif; padding: 0; margin: 0; }
+        </style>
+        </head>
+        <body>
+        ${content}
+        </body>
+        </html>
+            `;
+
+            const blob = new Blob([fullHtml], {
+            type: "application/msword"
+            });
+
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
         }
+
+        
 
         // ATS Compatibility Check
         function checkAtsContent() {
