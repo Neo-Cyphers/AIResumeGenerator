@@ -76,7 +76,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Project Link: [https://github.com/yourusername/resumecraft](https://github.com/yourusername/resumecraft)
+Project Link: [https://github.com/yourusername/resumecraft]([https://github.com/yourusername/resumecraft](https://ai-resume-generator-l82k.vercel.app/test_deepseek_code.html))
 
 ## Screenshots
 
