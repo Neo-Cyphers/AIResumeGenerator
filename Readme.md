@@ -1,6 +1,6 @@
 # ResumeCraft - Intelligent Resume Generator
 
-![ResumeCraft Screenshot](https://via.placeholder.com/800x400?text=ResumeCraft+Screenshot)
+![ResumeCraft Screenshot](Pictures/frontpage.png)
 
 ResumeCraft is an intelligent resume builder that helps you create professional, ATS-friendly resumes with ease. The application provides smart suggestions, real-time previews, and ATS compatibility scoring to ensure your resume stands out.
 
